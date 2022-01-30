@@ -1,0 +1,1782 @@
+QUESTION NO. - 3
+Use the same rest countries and print all countries name, region, sub region and population
+
+CODE-
+var xhr = new XMLHttpRequest();
+
+xhr.open("GET", "https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json");
+
+xhr.send();
+
+xhr.onload = function () {
+
+  if (xhr.status >= 200 && xhr.status < 300) {
+
+    var data = JSON.parse(xhr.response);
+
+    for (var i = 0; i < data.length; i++) {
+      var user = data[i];
+      console.log(`
+      name: ${user.name}
+      region: ${user.region}
+      subregion: ${user.subregion}
+      population: ${user.population}
+
+      `);
+    }
+  } else {
+    console.log("Data is not available");
+  }
+};
+
+OUTPUT - 
+
+      name: Afghanistan
+      region: Asia
+      subregion: Southern Asia
+      population: 27657145
+
+      
+script.js:15 
+      name: Åland Islands
+      region: Europe
+      subregion: Northern Europe
+      population: 28875
+
+      
+script.js:15 
+      name: Albania
+      region: Europe
+      subregion: Southern Europe
+      population: 2886026
+
+      
+script.js:15 
+      name: Algeria
+      region: Africa
+      subregion: Northern Africa
+      population: 40400000
+
+      
+script.js:15 
+      name: American Samoa
+      region: Oceania
+      subregion: Polynesia
+      population: 57100
+
+      
+script.js:15 
+      name: Andorra
+      region: Europe
+      subregion: Southern Europe
+      population: 78014
+
+      
+script.js:15 
+      name: Angola
+      region: Africa
+      subregion: Middle Africa
+      population: 25868000
+
+      
+script.js:15 
+      name: Anguilla
+      region: Americas
+      subregion: Caribbean
+      population: 13452
+
+      
+script.js:15 
+      name: Antarctica
+      region: Polar
+      subregion: 
+      population: 1000
+
+      
+script.js:15 
+      name: Antigua and Barbuda
+      region: Americas
+      subregion: Caribbean
+      population: 86295
+
+      
+script.js:15 
+      name: Argentina
+      region: Americas
+      subregion: South America
+      population: 43590400
+
+      
+script.js:15 
+      name: Armenia
+      region: Asia
+      subregion: Western Asia
+      population: 2994400
+
+      
+script.js:15 
+      name: Aruba
+      region: Americas
+      subregion: Caribbean
+      population: 107394
+
+      
+script.js:15 
+      name: Australia
+      region: Oceania
+      subregion: Australia and New Zealand
+      population: 24117360
+
+      
+script.js:15 
+      name: Austria
+      region: Europe
+      subregion: Western Europe
+      population: 8725931
+
+      
+script.js:15 
+      name: Azerbaijan
+      region: Asia
+      subregion: Western Asia
+      population: 9730500
+
+      
+script.js:15 
+      name: Bahamas
+      region: Americas
+      subregion: Caribbean
+      population: 378040
+
+      
+script.js:15 
+      name: Bahrain
+      region: Asia
+      subregion: Western Asia
+      population: 1404900
+
+      
+script.js:15 
+      name: Bangladesh
+      region: Asia
+      subregion: Southern Asia
+      population: 161006790
+
+      
+script.js:15 
+      name: Barbados
+      region: Americas
+      subregion: Caribbean
+      population: 285000
+
+      
+script.js:15 
+      name: Belarus
+      region: Europe
+      subregion: Eastern Europe
+      population: 9498700
+
+      
+script.js:15 
+      name: Belgium
+      region: Europe
+      subregion: Western Europe
+      population: 11319511
+
+      
+script.js:15 
+      name: Belize
+      region: Americas
+      subregion: Central America
+      population: 370300
+
+      
+script.js:15 
+      name: Benin
+      region: Africa
+      subregion: Western Africa
+      population: 10653654
+
+      
+script.js:15 
+      name: Bermuda
+      region: Americas
+      subregion: Northern America
+      population: 61954
+
+      
+script.js:15 
+      name: Bhutan
+      region: Asia
+      subregion: Southern Asia
+      population: 775620
+
+      
+script.js:15 
+      name: Bolivia (Plurinational State of)
+      region: Americas
+      subregion: South America
+      population: 10985059
+
+      
+script.js:15 
+      name: Bonaire, Sint Eustatius and Saba
+      region: Americas
+      subregion: Caribbean
+      population: 17408
+
+      
+script.js:15 
+      name: Bosnia and Herzegovina
+      region: Europe
+      subregion: Southern Europe
+      population: 3531159
+
+      
+script.js:15 
+      name: Botswana
+      region: Africa
+      subregion: Southern Africa
+      population: 2141206
+
+      
+script.js:15 
+      name: Bouvet Island
+      region: 
+      subregion: 
+      population: 0
+
+      
+script.js:15 
+      name: Brazil
+      region: Americas
+      subregion: South America
+      population: 206135893
+
+      
+script.js:15 
+      name: British Indian Ocean Territory
+      region: Africa
+      subregion: Eastern Africa
+      population: 3000
+
+      
+script.js:15 
+      name: United States Minor Outlying Islands
+      region: Americas
+      subregion: Northern America
+      population: 300
+
+      
+script.js:15 
+      name: Virgin Islands (British)
+      region: Americas
+      subregion: Caribbean
+      population: 28514
+
+      
+script.js:15 
+      name: Virgin Islands (U.S.)
+      region: Americas
+      subregion: Caribbean
+      population: 114743
+
+      
+script.js:15 
+      name: Brunei Darussalam
+      region: Asia
+      subregion: South-Eastern Asia
+      population: 411900
+
+      
+script.js:15 
+      name: Bulgaria
+      region: Europe
+      subregion: Eastern Europe
+      population: 7153784
+
+      
+script.js:15 
+      name: Burkina Faso
+      region: Africa
+      subregion: Western Africa
+      population: 19034397
+
+      
+script.js:15 
+      name: Burundi
+      region: Africa
+      subregion: Eastern Africa
+      population: 10114505
+
+      
+script.js:15 
+      name: Cambodia
+      region: Asia
+      subregion: South-Eastern Asia
+      population: 15626444
+
+      
+script.js:15 
+      name: Cameroon
+      region: Africa
+      subregion: Middle Africa
+      population: 22709892
+
+      
+script.js:15 
+      name: Canada
+      region: Americas
+      subregion: Northern America
+      population: 36155487
+
+      
+script.js:15 
+      name: Cabo Verde
+      region: Africa
+      subregion: Western Africa
+      population: 531239
+
+      
+script.js:15 
+      name: Cayman Islands
+      region: Americas
+      subregion: Caribbean
+      population: 58238
+
+      
+script.js:15 
+      name: Central African Republic
+      region: Africa
+      subregion: Middle Africa
+      population: 4998000
+
+      
+script.js:15 
+      name: Chad
+      region: Africa
+      subregion: Middle Africa
+      population: 14497000
+
+      
+script.js:15 
+      name: Chile
+      region: Americas
+      subregion: South America
+      population: 18191900
+
+      
+script.js:15 
+      name: China
+      region: Asia
+      subregion: Eastern Asia
+      population: 1377422166
+
+      
+script.js:15 
+      name: Christmas Island
+      region: Oceania
+      subregion: Australia and New Zealand
+      population: 2072
+
+      
+script.js:15 
+      name: Cocos (Keeling) Islands
+      region: Oceania
+      subregion: Australia and New Zealand
+      population: 550
+
+      
+script.js:15 
+      name: Colombia
+      region: Americas
+      subregion: South America
+      population: 48759958
+
+      
+script.js:15 
+      name: Comoros
+      region: Africa
+      subregion: Eastern Africa
+      population: 806153
+
+      
+script.js:15 
+      name: Congo
+      region: Africa
+      subregion: Middle Africa
+      population: 4741000
+
+      
+script.js:15 
+      name: Congo (Democratic Republic of the)
+      region: Africa
+      subregion: Middle Africa
+      population: 85026000
+
+      
+script.js:15 
+      name: Cook Islands
+      region: Oceania
+      subregion: Polynesia
+      population: 18100
+
+      
+script.js:15 
+      name: Costa Rica
+      region: Americas
+      subregion: Central America
+      population: 4890379
+
+      
+script.js:15 
+      name: Croatia
+      region: Europe
+      subregion: Southern Europe
+      population: 4190669
+
+      
+script.js:15 
+      name: Cuba
+      region: Americas
+      subregion: Caribbean
+      population: 11239004
+
+      
+script.js:15 
+      name: Curaçao
+      region: Americas
+      subregion: Caribbean
+      population: 154843
+
+      
+script.js:15 
+      name: Cyprus
+      region: Europe
+      subregion: Southern Europe
+      population: 847000
+
+      
+script.js:15 
+      name: Czech Republic
+      region: Europe
+      subregion: Eastern Europe
+      population: 10558524
+
+      
+script.js:15 
+      name: Denmark
+      region: Europe
+      subregion: Northern Europe
+      population: 5717014
+
+      
+script.js:15 
+      name: Djibouti
+      region: Africa
+      subregion: Eastern Africa
+      population: 900000
+
+      
+script.js:15 
+      name: Dominica
+      region: Americas
+      subregion: Caribbean
+      population: 71293
+
+      
+script.js:15 
+      name: Dominican Republic
+      region: Americas
+      subregion: Caribbean
+      population: 10075045
+
+      
+script.js:15 
+      name: Ecuador
+      region: Americas
+      subregion: South America
+      population: 16545799
+
+      
+script.js:15 
+      name: Egypt
+      region: Africa
+      subregion: Northern Africa
+      population: 91290000
+
+      
+script.js:15 
+      name: El Salvador
+      region: Americas
+      subregion: Central America
+      population: 6520675
+
+      
+script.js:15 
+      name: Equatorial Guinea
+      region: Africa
+      subregion: Middle Africa
+      population: 1222442
+
+      
+script.js:15 
+      name: Eritrea
+      region: Africa
+      subregion: Eastern Africa
+      population: 5352000
+
+      
+script.js:15 
+      name: Estonia
+      region: Europe
+      subregion: Northern Europe
+      population: 1315944
+
+      
+script.js:15 
+      name: Ethiopia
+      region: Africa
+      subregion: Eastern Africa
+      population: 92206005
+
+      
+script.js:15 
+      name: Falkland Islands (Malvinas)
+      region: Americas
+      subregion: South America
+      population: 2563
+
+      
+script.js:15 
+      name: Faroe Islands
+      region: Europe
+      subregion: Northern Europe
+      population: 49376
+
+      
+script.js:15 
+      name: Fiji
+      region: Oceania
+      subregion: Melanesia
+      population: 867000
+
+      
+script.js:15 
+      name: Finland
+      region: Europe
+      subregion: Northern Europe
+      population: 5491817
+
+      
+script.js:15 
+      name: France
+      region: Europe
+      subregion: Western Europe
+      population: 66710000
+
+      
+script.js:15 
+      name: French Guiana
+      region: Americas
+      subregion: South America
+      population: 254541
+
+      
+script.js:15 
+      name: French Polynesia
+      region: Oceania
+      subregion: Polynesia
+      population: 271800
+
+      
+script.js:15 
+      name: French Southern Territories
+      region: Africa
+      subregion: Southern Africa
+      population: 140
+
+      
+script.js:15 
+      name: Gabon
+      region: Africa
+      subregion: Middle Africa
+      population: 1802278
+
+      
+script.js:15 
+      name: Gambia
+      region: Africa
+      subregion: Western Africa
+      population: 1882450
+
+      
+script.js:15 
+      name: Georgia
+      region: Asia
+      subregion: Western Asia
+      population: 3720400
+
+      
+script.js:15 
+      name: Germany
+      region: Europe
+      subregion: Western Europe
+      population: 81770900
+
+      
+script.js:15 
+      name: Ghana
+      region: Africa
+      subregion: Western Africa
+      population: 27670174
+
+      
+script.js:15 
+      name: Gibraltar
+      region: Europe
+      subregion: Southern Europe
+      population: 33140
+
+      
+script.js:15 
+      name: Greece
+      region: Europe
+      subregion: Southern Europe
+      population: 10858018
+
+      
+script.js:15 
+      name: Greenland
+      region: Americas
+      subregion: Northern America
+      population: 55847
+
+      
+script.js:15 
+      name: Grenada
+      region: Americas
+      subregion: Caribbean
+      population: 103328
+
+      
+script.js:15 
+      name: Guadeloupe
+      region: Americas
+      subregion: Caribbean
+      population: 400132
+
+      
+script.js:15 
+      name: Guam
+      region: Oceania
+      subregion: Micronesia
+      population: 184200
+
+      
+script.js:15 
+      name: Guatemala
+      region: Americas
+      subregion: Central America
+      population: 16176133
+
+      
+script.js:15 
+      name: Guernsey
+      region: Europe
+      subregion: Northern Europe
+      population: 62999
+
+      
+script.js:15 
+      name: Guinea
+      region: Africa
+      subregion: Western Africa
+      population: 12947000
+
+      
+script.js:15 
+      name: Guinea-Bissau
+      region: Africa
+      subregion: Western Africa
+      population: 1547777
+
+      
+script.js:15 
+      name: Guyana
+      region: Americas
+      subregion: South America
+      population: 746900
+
+      
+script.js:15 
+      name: Haiti
+      region: Americas
+      subregion: Caribbean
+      population: 11078033
+
+      
+script.js:15 
+      name: Heard Island and McDonald Islands
+      region: 
+      subregion: 
+      population: 0
+
+      
+script.js:15 
+      name: Holy See
+      region: Europe
+      subregion: Southern Europe
+      population: 451
+
+      
+script.js:15 
+      name: Honduras
+      region: Americas
+      subregion: Central America
+      population: 8576532
+
+      
+script.js:15 
+      name: Hong Kong
+      region: Asia
+      subregion: Eastern Asia
+      population: 7324300
+
+      
+script.js:15 
+      name: Hungary
+      region: Europe
+      subregion: Eastern Europe
+      population: 9823000
+
+      
+script.js:15 
+      name: Iceland
+      region: Europe
+      subregion: Northern Europe
+      population: 334300
+
+      
+script.js:15 
+      name: India
+      region: Asia
+      subregion: Southern Asia
+      population: 1295210000
+
+      
+script.js:15 
+      name: Indonesia
+      region: Asia
+      subregion: South-Eastern Asia
+      population: 258705000
+
+      
+script.js:15 
+      name: Côte d'Ivoire
+      region: Africa
+      subregion: Western Africa
+      population: 22671331
+
+      
+script.js:15 
+      name: Iran (Islamic Republic of)
+      region: Asia
+      subregion: Southern Asia
+      population: 79369900
+
+      
+script.js:15 
+      name: Iraq
+      region: Asia
+      subregion: Western Asia
+      population: 37883543
+
+      
+script.js:15 
+      name: Ireland
+      region: Europe
+      subregion: Northern Europe
+      population: 6378000
+
+      
+script.js:15 
+      name: Isle of Man
+      region: Europe
+      subregion: Northern Europe
+      population: 84497
+
+      
+script.js:15 
+      name: Israel
+      region: Asia
+      subregion: Western Asia
+      population: 8527400
+
+      
+script.js:15 
+      name: Italy
+      region: Europe
+      subregion: Southern Europe
+      population: 60665551
+
+      
+script.js:15 
+      name: Jamaica
+      region: Americas
+      subregion: Caribbean
+      population: 2723246
+
+      
+script.js:15 
+      name: Japan
+      region: Asia
+      subregion: Eastern Asia
+      population: 126960000
+
+      
+script.js:15 
+      name: Jersey
+      region: Europe
+      subregion: Northern Europe
+      population: 100800
+
+      
+script.js:15 
+      name: Jordan
+      region: Asia
+      subregion: Western Asia
+      population: 9531712
+
+      
+script.js:15 
+      name: Kazakhstan
+      region: Asia
+      subregion: Central Asia
+      population: 17753200
+
+      
+script.js:15 
+      name: Kenya
+      region: Africa
+      subregion: Eastern Africa
+      population: 47251000
+
+      
+script.js:15 
+      name: Kiribati
+      region: Oceania
+      subregion: Micronesia
+      population: 113400
+
+      
+script.js:15 
+      name: Kuwait
+      region: Asia
+      subregion: Western Asia
+      population: 4183658
+
+      
+script.js:15 
+      name: Kyrgyzstan
+      region: Asia
+      subregion: Central Asia
+      population: 6047800
+
+      
+script.js:15 
+      name: Lao People's Democratic Republic
+      region: Asia
+      subregion: South-Eastern Asia
+      population: 6492400
+
+      
+script.js:15 
+      name: Latvia
+      region: Europe
+      subregion: Northern Europe
+      population: 1961600
+
+      
+script.js:15 
+      name: Lebanon
+      region: Asia
+      subregion: Western Asia
+      population: 5988000
+
+      
+script.js:15 
+      name: Lesotho
+      region: Africa
+      subregion: Southern Africa
+      population: 1894194
+
+      
+script.js:15 
+      name: Liberia
+      region: Africa
+      subregion: Western Africa
+      population: 4615000
+
+      
+script.js:15 
+      name: Libya
+      region: Africa
+      subregion: Northern Africa
+      population: 6385000
+
+      
+script.js:15 
+      name: Liechtenstein
+      region: Europe
+      subregion: Western Europe
+      population: 37623
+
+      
+script.js:15 
+      name: Lithuania
+      region: Europe
+      subregion: Northern Europe
+      population: 2872294
+
+      
+script.js:15 
+      name: Luxembourg
+      region: Europe
+      subregion: Western Europe
+      population: 576200
+
+      
+script.js:15 
+      name: Macao
+      region: Asia
+      subregion: Eastern Asia
+      population: 649100
+
+      
+script.js:15 
+      name: Macedonia (the former Yugoslav Republic of)
+      region: Europe
+      subregion: Southern Europe
+      population: 2058539
+
+      
+script.js:15 
+      name: Madagascar
+      region: Africa
+      subregion: Eastern Africa
+      population: 22434363
+
+      
+script.js:15 
+      name: Malawi
+      region: Africa
+      subregion: Eastern Africa
+      population: 16832910
+
+      
+script.js:15 
+      name: Malaysia
+      region: Asia
+      subregion: South-Eastern Asia
+      population: 31405416
+
+      
+script.js:15 
+      name: Maldives
+      region: Asia
+      subregion: Southern Asia
+      population: 344023
+
+      
+script.js:15 
+      name: Mali
+      region: Africa
+      subregion: Western Africa
+      population: 18135000
+
+      
+script.js:15 
+      name: Malta
+      region: Europe
+      subregion: Southern Europe
+      population: 425384
+
+      
+script.js:15 
+      name: Marshall Islands
+      region: Oceania
+      subregion: Micronesia
+      population: 54880
+
+      
+script.js:15 
+      name: Martinique
+      region: Americas
+      subregion: Caribbean
+      population: 378243
+
+      
+script.js:15 
+      name: Mauritania
+      region: Africa
+      subregion: Western Africa
+      population: 3718678
+
+      
+script.js:15 
+      name: Mauritius
+      region: Africa
+      subregion: Eastern Africa
+      population: 1262879
+
+      
+script.js:15 
+      name: Mayotte
+      region: Africa
+      subregion: Eastern Africa
+      population: 226915
+
+      
+script.js:15 
+      name: Mexico
+      region: Americas
+      subregion: Central America
+      population: 122273473
+
+      
+script.js:15 
+      name: Micronesia (Federated States of)
+      region: Oceania
+      subregion: Micronesia
+      population: 102800
+
+      
+script.js:15 
+      name: Moldova (Republic of)
+      region: Europe
+      subregion: Eastern Europe
+      population: 3553100
+
+      
+script.js:15 
+      name: Monaco
+      region: Europe
+      subregion: Western Europe
+      population: 38400
+
+      
+script.js:15 
+      name: Mongolia
+      region: Asia
+      subregion: Eastern Asia
+      population: 3093100
+
+      
+script.js:15 
+      name: Montenegro
+      region: Europe
+      subregion: Southern Europe
+      population: 621810
+
+      
+script.js:15 
+      name: Montserrat
+      region: Americas
+      subregion: Caribbean
+      population: 4922
+
+      
+script.js:15 
+      name: Morocco
+      region: Africa
+      subregion: Northern Africa
+      population: 33337529
+
+      
+script.js:15 
+      name: Mozambique
+      region: Africa
+      subregion: Eastern Africa
+      population: 26423700
+
+      
+script.js:15 
+      name: Myanmar
+      region: Asia
+      subregion: South-Eastern Asia
+      population: 51419420
+
+      
+script.js:15 
+      name: Namibia
+      region: Africa
+      subregion: Southern Africa
+      population: 2324388
+
+      
+script.js:15 
+      name: Nauru
+      region: Oceania
+      subregion: Micronesia
+      population: 10084
+
+      
+script.js:15 
+      name: Nepal
+      region: Asia
+      subregion: Southern Asia
+      population: 28431500
+
+      
+script.js:15 
+      name: Netherlands
+      region: Europe
+      subregion: Western Europe
+      population: 17019800
+
+      
+script.js:15 
+      name: New Caledonia
+      region: Oceania
+      subregion: Melanesia
+      population: 268767
+
+      
+script.js:15 
+      name: New Zealand
+      region: Oceania
+      subregion: Australia and New Zealand
+      population: 4697854
+
+      
+script.js:15 
+      name: Nicaragua
+      region: Americas
+      subregion: Central America
+      population: 6262703
+
+      
+script.js:15 
+      name: Niger
+      region: Africa
+      subregion: Western Africa
+      population: 20715000
+
+      
+script.js:15 
+      name: Nigeria
+      region: Africa
+      subregion: Western Africa
+      population: 186988000
+
+      
+script.js:15 
+      name: Niue
+      region: Oceania
+      subregion: Polynesia
+      population: 1470
+
+      
+script.js:15 
+      name: Norfolk Island
+      region: Oceania
+      subregion: Australia and New Zealand
+      population: 2302
+
+      
+script.js:15 
+      name: Korea (Democratic People's Republic of)
+      region: Asia
+      subregion: Eastern Asia
+      population: 25281000
+
+      
+script.js:15 
+      name: Northern Mariana Islands
+      region: Oceania
+      subregion: Micronesia
+      population: 56940
+
+      
+script.js:15 
+      name: Norway
+      region: Europe
+      subregion: Northern Europe
+      population: 5223256
+
+      
+script.js:15 
+      name: Oman
+      region: Asia
+      subregion: Western Asia
+      population: 4420133
+
+      
+script.js:15 
+      name: Pakistan
+      region: Asia
+      subregion: Southern Asia
+      population: 194125062
+
+      
+script.js:15 
+      name: Palau
+      region: Oceania
+      subregion: Micronesia
+      population: 17950
+
+      
+script.js:15 
+      name: Palestine, State of
+      region: Asia
+      subregion: Western Asia
+      population: 4682467
+
+      
+script.js:15 
+      name: Panama
+      region: Americas
+      subregion: Central America
+      population: 3814672
+
+      
+script.js:15 
+      name: Papua New Guinea
+      region: Oceania
+      subregion: Melanesia
+      population: 8083700
+
+      
+script.js:15 
+      name: Paraguay
+      region: Americas
+      subregion: South America
+      population: 6854536
+
+      
+script.js:15 
+      name: Peru
+      region: Americas
+      subregion: South America
+      population: 31488700
+
+      
+script.js:15 
+      name: Philippines
+      region: Asia
+      subregion: South-Eastern Asia
+      population: 103279800
+
+      
+script.js:15 
+      name: Pitcairn
+      region: Oceania
+      subregion: Polynesia
+      population: 56
+
+      
+script.js:15 
+      name: Poland
+      region: Europe
+      subregion: Eastern Europe
+      population: 38437239
+
+      
+script.js:15 
+      name: Portugal
+      region: Europe
+      subregion: Southern Europe
+      population: 10374822
+
+      
+script.js:15 
+      name: Puerto Rico
+      region: Americas
+      subregion: Caribbean
+      population: 3474182
+
+      
+script.js:15 
+      name: Qatar
+      region: Asia
+      subregion: Western Asia
+      population: 2587564
+
+      
+script.js:15 
+      name: Republic of Kosovo
+      region: Europe
+      subregion: Eastern Europe
+      population: 1733842
+
+      
+script.js:15 
+      name: Réunion
+      region: Africa
+      subregion: Eastern Africa
+      population: 840974
+
+      
+script.js:15 
+      name: Romania
+      region: Europe
+      subregion: Eastern Europe
+      population: 19861408
+
+      
+script.js:15 
+      name: Russian Federation
+      region: Europe
+      subregion: Eastern Europe
+      population: 146599183
+
+      
+script.js:15 
+      name: Rwanda
+      region: Africa
+      subregion: Eastern Africa
+      population: 11553188
+
+      
+script.js:15 
+      name: Saint Barthélemy
+      region: Americas
+      subregion: Caribbean
+      population: 9417
+
+      
+script.js:15 
+      name: Saint Helena, Ascension and Tristan da Cunha
+      region: Africa
+      subregion: Western Africa
+      population: 4255
+
+      
+script.js:15 
+      name: Saint Kitts and Nevis
+      region: Americas
+      subregion: Caribbean
+      population: 46204
+
+      
+script.js:15 
+      name: Saint Lucia
+      region: Americas
+      subregion: Caribbean
+      population: 186000
+
+      
+script.js:15 
+      name: Saint Martin (French part)
+      region: Americas
+      subregion: Caribbean
+      population: 36979
+
+      
+script.js:15 
+      name: Saint Pierre and Miquelon
+      region: Americas
+      subregion: Northern America
+      population: 6069
+
+      
+script.js:15 
+      name: Saint Vincent and the Grenadines
+      region: Americas
+      subregion: Caribbean
+      population: 109991
+
+      
+script.js:15 
+      name: Samoa
+      region: Oceania
+      subregion: Polynesia
+      population: 194899
+
+      
+script.js:15 
+      name: San Marino
+      region: Europe
+      subregion: Southern Europe
+      population: 33005
+
+      
+script.js:15 
+      name: Sao Tome and Principe
+      region: Africa
+      subregion: Middle Africa
+      population: 187356
+
+      
+script.js:15 
+      name: Saudi Arabia
+      region: Asia
+      subregion: Western Asia
+      population: 32248200
+
+      
+script.js:15 
+      name: Senegal
+      region: Africa
+      subregion: Western Africa
+      population: 14799859
+
+      
+script.js:15 
+      name: Serbia
+      region: Europe
+      subregion: Southern Europe
+      population: 7076372
+
+      
+script.js:15 
+      name: Seychelles
+      region: Africa
+      subregion: Eastern Africa
+      population: 91400
+
+      
+script.js:15 
+      name: Sierra Leone
+      region: Africa
+      subregion: Western Africa
+      population: 7075641
+
+      
+script.js:15 
+      name: Singapore
+      region: Asia
+      subregion: South-Eastern Asia
+      population: 5535000
+
+      
+script.js:15 
+      name: Sint Maarten (Dutch part)
+      region: Americas
+      subregion: Caribbean
+      population: 38247
+
+      
+script.js:15 
+      name: Slovakia
+      region: Europe
+      subregion: Eastern Europe
+      population: 5426252
+
+      
+script.js:15 
+      name: Slovenia
+      region: Europe
+      subregion: Southern Europe
+      population: 2064188
+
+      
+script.js:15 
+      name: Solomon Islands
+      region: Oceania
+      subregion: Melanesia
+      population: 642000
+
+      
+script.js:15 
+      name: Somalia
+      region: Africa
+      subregion: Eastern Africa
+      population: 11079000
+
+      
+script.js:15 
+      name: South Africa
+      region: Africa
+      subregion: Southern Africa
+      population: 55653654
+
+      
+script.js:15 
+      name: South Georgia and the South Sandwich Islands
+      region: Americas
+      subregion: South America
+      population: 30
+
+      
+script.js:15 
+      name: Korea (Republic of)
+      region: Asia
+      subregion: Eastern Asia
+      population: 50801405
+
+      
+script.js:15 
+      name: South Sudan
+      region: Africa
+      subregion: Middle Africa
+      population: 12131000
+
+      
+script.js:15 
+      name: Spain
+      region: Europe
+      subregion: Southern Europe
+      population: 46438422
+
+      
+script.js:15 
+      name: Sri Lanka
+      region: Asia
+      subregion: Southern Asia
+      population: 20966000
+
+      
+script.js:15 
+      name: Sudan
+      region: Africa
+      subregion: Northern Africa
+      population: 39598700
+
+      
+script.js:15 
+      name: Suriname
+      region: Americas
+      subregion: South America
+      population: 541638
+
+      
+script.js:15 
+      name: Svalbard and Jan Mayen
+      region: Europe
+      subregion: Northern Europe
+      population: 2562
+
+      
+script.js:15 
+      name: Swaziland
+      region: Africa
+      subregion: Southern Africa
+      population: 1132657
+
+      
+script.js:15 
+      name: Sweden
+      region: Europe
+      subregion: Northern Europe
+      population: 9894888
+
+      
+script.js:15 
+      name: Switzerland
+      region: Europe
+      subregion: Western Europe
+      population: 8341600
+
+      
+script.js:15 
+      name: Syrian Arab Republic
+      region: Asia
+      subregion: Western Asia
+      population: 18564000
+
+      
+script.js:15 
+      name: Taiwan
+      region: Asia
+      subregion: Eastern Asia
+      population: 23503349
+
+      
+script.js:15 
+      name: Tajikistan
+      region: Asia
+      subregion: Central Asia
+      population: 8593600
+
+      
+script.js:15 
+      name: Tanzania, United Republic of
+      region: Africa
+      subregion: Eastern Africa
+      population: 55155000
+
+      
+script.js:15 
+      name: Thailand
+      region: Asia
+      subregion: South-Eastern Asia
+      population: 65327652
+
+      
+script.js:15 
+      name: Timor-Leste
+      region: Asia
+      subregion: South-Eastern Asia
+      population: 1167242
+
+      
+script.js:15 
+      name: Togo
+      region: Africa
+      subregion: Western Africa
+      population: 7143000
+
+      
+script.js:15 
+      name: Tokelau
+      region: Oceania
+      subregion: Polynesia
+      population: 1411
+
+      
+script.js:15 
+      name: Tonga
+      region: Oceania
+      subregion: Polynesia
+      population: 103252
+
+      
+script.js:15 
+      name: Trinidad and Tobago
+      region: Americas
+      subregion: Caribbean
+      population: 1349667
+
+      
+script.js:15 
+      name: Tunisia
+      region: Africa
+      subregion: Northern Africa
+      population: 11154400
+
+      
+script.js:15 
+      name: Turkey
+      region: Asia
+      subregion: Western Asia
+      population: 78741053
+
+      
+script.js:15 
+      name: Turkmenistan
+      region: Asia
+      subregion: Central Asia
+      population: 4751120
+
+      
+script.js:15 
+      name: Turks and Caicos Islands
+      region: Americas
+      subregion: Caribbean
+      population: 31458
+
+      
+script.js:15 
+      name: Tuvalu
+      region: Oceania
+      subregion: Polynesia
+      population: 10640
+
+      
+script.js:15 
+      name: Uganda
+      region: Africa
+      subregion: Eastern Africa
+      population: 33860700
+
+      
+script.js:15 
+      name: Ukraine
+      region: Europe
+      subregion: Eastern Europe
+      population: 42692393
+
+      
+script.js:15 
+      name: United Arab Emirates
+      region: Asia
+      subregion: Western Asia
+      population: 9856000
+
+      
+script.js:15 
+      name: United Kingdom of Great Britain and Northern Ireland
+      region: Europe
+      subregion: Northern Europe
+      population: 65110000
+
+      
+script.js:15 
+      name: United States of America
+      region: Americas
+      subregion: Northern America
+      population: 323947000
+
+      
+script.js:15 
+      name: Uruguay
+      region: Americas
+      subregion: South America
+      population: 3480222
+
+      
+script.js:15 
+      name: Uzbekistan
+      region: Asia
+      subregion: Central Asia
+      population: 31576400
+
+      
+script.js:15 
+      name: Vanuatu
+      region: Oceania
+      subregion: Melanesia
+      population: 277500
+
+      
+script.js:15 
+      name: Venezuela (Bolivarian Republic of)
+      region: Americas
+      subregion: South America
+      population: 31028700
+
+      
+script.js:15 
+      name: Viet Nam
+      region: Asia
+      subregion: South-Eastern Asia
+      population: 92700000
+
+      
+script.js:15 
+      name: Wallis and Futuna
+      region: Oceania
+      subregion: Polynesia
+      population: 11750
+
+      
+script.js:15 
+      name: Western Sahara
+      region: Africa
+      subregion: Northern Africa
+      population: 510713
+
+      
+script.js:15 
+      name: Yemen
+      region: Asia
+      subregion: Western Asia
+      population: 27478000
+
+      
+script.js:15 
+      name: Zambia
+      region: Africa
+      subregion: Eastern Africa
+      population: 15933883
+
+      
+script.js:15 
+      name: Zimbabwe
+      region: Africa
+      subregion: Eastern Africa
+      population: 14240168
+
+      
